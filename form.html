@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Form</title>
+    <style>
+        label{
+            display: block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to HS Club</h2>
+    <form>
+        <label for="name">Your Name
+            <input id="name" type="text" placeholder="your name">
+        </label>
+        
+        <label for="email">Your Email
+            <input id="email" type="email" placeholder="your email">
+        </label>
+        <label for="phone">Your Email
+            <input id="phone" type="number" placeholder="your phone Number">
+        </label>
+
+        <fieldset>
+            <legend>Pick one Help</legend>
+            <label for="Cricket">
+                <input type="radio" name="cricket" id="Cricket">   <!--naem same dite hobe,,,for & id name same hobe-->
+                Cricket
+            </label>
+            <label for="Football">
+                <input type="radio" name="cricket" id="Football">  <!--naem same dite hobe,,,for & id name same hobe-->
+                Football
+            </label>
+            <label for="volybal">
+                 <input type="radio" name="cricket" id="volyball">  <!--naem same dite hobe,,,for & id name same hobe-->
+                Volyball
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Select one or more options</legend>
+            <label for="sorisa">
+                <input type="checkbox" name="vorta" id="sorisa">
+                Sorisa
+            </label>
+            <label for="sutki">
+                <input type="checkbox" name="vorta" id="sutki">
+                Sutki
+            </label>
+            <label for="dal">
+                <input type="checkbox" name="vorta" id="dal">
+                Dal
+            </label>
+            <fieldset>
+                <legend>Special Instruction</legend>
+                <textarea name="" id="" cols="60" rows="3"></textarea>
+            </fieldset>
+            <input type="reset" value="reset">
+            <input type="submit" value="submit">
+        </fieldset>
+
+    </form>
+</body>
+</html>
