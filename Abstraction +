@@ -1,0 +1,57 @@
+void main() {
+ Network network = Network('Wafiur');
+ Admin aadmin = Admin();
+
+ Map<String, String> data = {
+  'email' : 'abc@gmail.com',
+  'adminName' : 'Sagor',
+  'password' : '12342diu'
+ };
+ network.display();
+ network.postApi(data);
+
+ aadmin.postApi(data);
+}
+
+abstract class BaseApi{
+  void postApi(var data);
+  void getApi();
+
+}
+
+class Network extends BaseApi{
+  String name;
+  Network(this.name);
+  @override
+  void getApi(){
+
+  }
+  @override
+  void postApi(var data)async{
+    print('Api Hit!');
+    await Future.delayed(Duration(seconds: 4));
+    print('Successfully Login!');
+    print('LogIn Email: ${data['email']}');
+
+  }
+  void display()
+  {
+    print('Name: $name');
+  }
+
+}
+
+class Admin extends BaseApi{
+  @override
+  void getApi(){
+
+  }
+  @override
+  void postApi(var data)async{
+    await Future.delayed(Duration(seconds: 6));
+    print('Admin Entered!');
+    print('Successfully Login!');
+    print('AdminName: ${data['adminName']}');
+
+  }
+}
