@@ -1,0 +1,38 @@
+void main() {
+ Network network = Network('Wafiur');
+
+ Map<String, String> data = {
+  'email' : 'abc@gmail.com',
+  'password' : '12342diu'
+ };
+ network.display();
+ network.postApi(data);
+}
+
+abstract class BaseApi{
+  void postApi(var data);
+  void getApi();
+
+}
+
+class Network extends BaseApi{
+  String name;
+  Network(this.name);
+  @override
+  void getApi(){
+
+  }
+  @override
+  void postApi(var data)async{
+    print('Api Hit!');
+    await Future.delayed(Duration(seconds: 4));
+    print('Successfully Login!');
+    print(data['email']);
+
+  }
+  void display()
+  {
+    print('Name: $name');
+  }
+
+}
